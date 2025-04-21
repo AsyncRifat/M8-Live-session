@@ -1,0 +1,4 @@
+* আমি যে children [] দিয়ে main  path  এর মধ্যে পাঠাই তা আমাদের placeholder component এর <Outlate></Outlate> এর মধ্যে যায়।
+
+* Children এর মধ্যে ও যদি আবার nested করতে চাই তাহলে আমাকে path এ / এই "স্ল্যাশ" ব্যবহার করা যাবে না।
+
