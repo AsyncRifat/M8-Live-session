@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router';
 import { TiShoppingCart } from 'react-icons/ti';
 import { MdBookmarkAdd } from 'react-icons/md';
+import { CartContext } from '../providers/Contexts';
 
 const Navbar = () => {
+  const { cart } = useContext(CartContext);
+  // console.log(cart);
   return (
     <div className="navbar p-0 bg-base-100 shadow-sm  px-4 md:px-7 lg:px-10 xl:px-14">
       <div className="navbar-start">
@@ -96,12 +99,13 @@ const Navbar = () => {
             </NavLink>
           </li>
 
-          <li>
+          <li className='relative'>
             <NavLink
               to="/cart"
-              className={({ isActive }) => (isActive ? 'text-red-500' : '')}
+              className={({ isActive }) => (isActive ? 'text-cyan-500' : '')}
             >
               <TiShoppingCart size={22} />
+              <p>{cart.length}</p>
             </NavLink>
           </li>
 
